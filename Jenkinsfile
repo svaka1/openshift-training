@@ -3,15 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Hi, building the app...."
+                sh "mvn -version"
             }
         }
         stage('test') {
-            when {
-               expression {
-                    BRANCH_NAME == 'master'
-               }
-            }
             steps {
                 echo "Hi, building the app...."
             }
