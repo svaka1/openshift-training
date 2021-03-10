@@ -6,7 +6,7 @@ pipeline {
     }
     parameters {
        string(name: 'VERSION',defaultValue: '1.9',description:'This is version')
-       choice(name:'CHOICE',choices:['Sarat','bharat','Gnanesh'], decsription:'This is choice')
+       choice(name:'CHOICE',choices:['Sarat','bharat','Gnanesh'], description:'This is choice')
     }
     stages {
         stage('build') {
