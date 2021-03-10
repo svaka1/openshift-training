@@ -8,6 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "My name is ${NAME} and number is ${NUMBER} "
+                echo "Branch name is ${BRANCH_NAME}"
             }
         }
         stage('Image build') {
