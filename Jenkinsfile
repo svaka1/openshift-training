@@ -8,13 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "My name is ${NAME} and number is ${NUMBER} "
-                echo "Build Number is ${env.BUILD_ID}"
-                withCredentials([
-                     usernamePassword(credentialsId: 'GitHubCreds', usernameVariable: 'USER', passwordVariable: 'PWD')
-                     ]) {
-                     echo "$USER"
-                     echo "$PWD"
-                }
+                echo "Build Number is ${BUILD_ID}"
             }
         }
         stage('Image build') {
