@@ -8,7 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "My name is ${NAME} and number is ${NUMBER} "
-                echo BRANCH_NAME
+                bat "echo $BRANCH_NAME"
             }
         }
         stage('Image build') {
