@@ -12,8 +12,8 @@ pipeline {
                 withCredentials([
                      usernamePassword(credentialsId: 'GitHubCreds', usernameVariable: 'USER', passwordVariable: 'PWD')
                      ]) {
-                     echo "${USER}"
-                     echo "${PWD}"
+                     echo "$USER"
+                     echo "$PWD"
                 }
             }
         }
