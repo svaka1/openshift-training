@@ -1,14 +1,18 @@
 pipeline {
     agent any
+    environment {
+    NAME = 'Sarat Vaka'
+    NUMBER = '7661866440'
+    }
     stages {
         stage('build') {
             steps {
-                bat "mvn clean install"
+                echo "My name is ${NAME} and number is ${NUMBER} "
             }
         }
-        stage('test') {
+        stage('Image build') {
             steps {
-                echo "Testing the app...."
+                echo "Building ......."
             }
         }
     }
